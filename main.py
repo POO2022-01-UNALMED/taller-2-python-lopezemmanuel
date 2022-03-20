@@ -56,7 +56,7 @@ class Auto:
             return pirateria
         
         for asiento in self.asientos:
-            if asiento.registro != self.registro:
+            if isinstance(asiento, Asiento) and asiento.registro != self.registro:
                 return pirateria
 
         return original
